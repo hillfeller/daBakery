@@ -30,6 +30,8 @@ GEM
       activemodel (= 4.2.5)
       activesupport (= 4.2.5)
       arel (~> 6.0)
+    activerecord-postgresql-adapter (0.0.1)
+      pg
     activesupport (4.2.5)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -93,6 +95,7 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
+    pg (0.18.4)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -166,6 +169,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-postgresql-adapter
   bcrypt
   bootstrap-sass (~> 3.3.6)
   byebug
@@ -175,6 +179,7 @@ DEPENDENCIES
   hiredis (~> 0.6.0)
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   rails (= 4.2.5)
   redis (>= 3.2.0)
   sass-rails (~> 5.0)
