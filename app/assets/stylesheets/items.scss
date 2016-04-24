@@ -1,3 +1,18 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.items-grid {
+  .item-card {
+    width:200px;
+    margin-left: 100px;
+    padding: 25px;
+    display: inline-block;
+    .bread img {
+      height: 150px;
+      width:150px;
+    }
+    .item-info {
+      .title { height: 4em; }
+    }
+  }
+}

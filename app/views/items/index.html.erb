@@ -1,35 +1,23 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Items</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Price</th>
-      <th>Amount</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="column">
+  <ul class="items-grid no-bullet row">
     <% @items.each do |item| %>
-      <tr>
-        <td><%= item.title %></td>
-        <td><%= item.price %></td>
-        <td><%= item.amount %></td>
-        <td><%= item.description %></td>
-        <td><%= item.bread_url %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <li class="medium-3 medium-3 medium-3 column">
+        <div class="item-card padly">
+          <%= link_to item, class: "bread" do %>
+            <%= image_tag item.bread %>
+          <% end %>
+          <div class="item-info ell glassy-bg padmy padlx">
+            <div>
+              <h3><%= item.title %></h3>
+            </div>
+            <p class="left price label item-label radius">
+              <ul>
+                <li><%= item.description %></li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </li>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Item', new_item_path %>
+  </ul>
