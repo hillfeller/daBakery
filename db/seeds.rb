@@ -12,20 +12,28 @@
 #   Item.find_or_create_by(title: row[0], price: row[1], amount: row[2], description: row[3], bread_url: row[4])
 # end
 
+#AdminUser.create!(email: 'hillary@admin.com', password: 'password', password_confirmation: 'password')
 
+# 50.times do
+#    Item.create!(
+#      title:   Faker::Lorem.characters(12),
+#      price:  Faker::Commerce.price,
+#      amount:  Faker::Number.digit,
+#      description: Faker::Lorem.sentence,
+#      bread_url: Faker::Placeholdit.image("50x50", 'jpg')
+#    )
+#  end
 
-50.times do
-   Item.create!(
-     title:   Faker::Lorem.characters(12),
-     price:  Faker::Commerce.price,
-     amount:  Faker::Number.digit,
-     description: Faker::Lorem.sentence,
-     bread_url: Faker::Placeholdit.image("50x50", 'jpg')
-   )
- end
+ 15.times do
+    User.create!(
+      email:   Faker::Internet.email,
+      password_digest:  Faker::Internet.password(8),
+    )
+  end
 
- items = Item.all
+ #items = Item.all
+users = User.all
+ #puts "Seed finished"
 
- puts "Seed finished"
-
- puts "#{Item.count} items created"
+ #puts "#{Item.count} items created"
+ puts "#{User.count} users created"

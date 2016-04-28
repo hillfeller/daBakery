@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .items-grid {
   .item-card {
-    width:200px;
-    margin-left: 100px;
-    padding: 25px;
+    width:300px;
+    margin-left: 0px;
+    padding: 50px;
     display: inline-block;
     .bread img {
       height: 150px;
@@ -15,4 +15,10 @@
       .title { height: 4em; }
     }
   }
+}
+
+.itemsindex{
+  padding-left: 175px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'store/show'
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :items
   root 'welcome#index'
 

@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-  belongs_to :store
+  belongs_to :user
 
   def bread
     "http://open.imagebank.lantmannen.com/Lantmannen%20Unibake/Benelux/12474000_2.jpg"
